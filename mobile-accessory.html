@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Accessories</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F7FAFC;
+    }
+
+    /* PAGE WRAPPER */
+    .mobile-accessories-page {
+      padding: 40px 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 270px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      margin: 15px 0 10px;
+      color: #222;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px;
+    }
+
+    .sidebar li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .category-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .category-buttons button {
+      background-color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .category-buttons button:hover {
+      background-color: #ddd;
+    }
+
+    /* PRODUCT GRID */
+    .products-grid {
+      flex: 1;
+    }
+
+    .products-grid .section-title {
+      background-color: #fff;
+      padding: 15px 25px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #111;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .product-row {
+      display: flex;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .product-image {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      background-color: #f1f1f1;
+    }
+
+    .product-info {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .product-info h4 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .price {
+      font-size: 16px;
+      color: #0a8;
+      font-weight: bold;
+    }
+
+    .rating {
+      margin-top: 10px;
+      color: #f39c12;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ HEADER GOES HERE -->
+  <!-- Example: <header>...your existing header code...</header> -->
+    <!-- Header Section -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="assets/images/logo.svg.png" alt="Logo" />
+    </div>
+
+  <form class="custom-search-bar" id="search-form">
+  <input type="text" name="q" class="search-input" placeholder="Search..." />
+
+  <select name="category" class="search-category" id="category-select">
+    <option value="all">All Category</option>
+    <option value="mobile-accessory">Mobile Accessories</option>
+    <option value="electronics">Electronics</option>
+    <option value="smartphone">Smartphone</option>
+    <option value="modern-tech">Modern Tech</option>
+  </select>
+
+  <button type="submit" class="search-button">
+    <img src="assets/images/btn-group.png" alt="Search" />
+  </button>
+</form>
+
+
+
+    <div class="header-icons">
+      <img src="assets/images/Message.png" alt="Messages" />
+      <img src="assets/images/Profile.png" alt="Profile" />
+      <img src="assets/images/Cart.png" alt="Cart" />
+      <img src="assets/images/Orders.png" alt="Orders" />
+    </div>
+  </header>
+
+    <!-- Navigation Buttons -->
+  <div class="header-nav">
+    <div class="nav-left">
+      <a href="#">All Category</a>
+      <a href="#">Hot Offers</a>
+      <a href="#">Gift Boxes</a>
+      <a href="#">Projects</a>
+      <a href="#">Main Menu</a>
+      <div class="dropdown">
+        <a href="#">Help ▼</a>
+        <div class="dropdown-content">
+          <a href="#">Support</a>
+          <a href="#">FAQs</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="dropdown">
+        <button>ENG, USD ▼</button>
+        <div class="dropdown-content">
+          <a href="#">ENG, USD</a>
+          <a href="#">ESP, EUR</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button>Ship to ▼<img src="assets/images/flag.png" alt="Flag" /></button>
+        <div class="dropdown-content">
+          <a href="#">Germany</a>
+          <a href="#">USA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ MAIN BODY -->
+  <section class="mobile-accessories-page">
+    <div class="container">
+      
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- Category Buttons -->
+        <h3>Category</h3>
+        <div class="category-buttons">
+          <button>Mobile Accessory</button>
+          <button>Electronics</button>
+          <button>Smart Phones</button>
+          <button>Modern Tech</button>
+        </div>
+
+        <!-- Brands -->
+        <h3>Brands</h3>
+        <ul>
+          <li><input type="checkbox"> Samsung</li>
+          <li><input type="checkbox"> Huawei</li>
+          <li><input type="checkbox"> Apple</li>
+          <li><input type="checkbox"> Pocco</li>
+        </ul>
+
+        <!-- Features -->
+        <h3>Features</h3>
+        <ul>
+          <li><input type="checkbox"> Metalic</li>
+          <li><input type="checkbox"> Plastic</li>
+          <li><input type="checkbox"> Super Power</li>
+          <li><input type="checkbox"> Large Memory</li>
+        </ul>
+
+        <!-- Price Range -->
+        <h3>Price Range</h3>
+        <ul>
+          <li><input type="checkbox"> USD 100-500</li>
+          <li><input type="checkbox"> USD 500-1000</li>
+          <li><input type="checkbox"> USD 1500-2000</li>
+          <li><input type="checkbox"> USD 2000+</li>
+        </ul>
+
+        <!-- Ratings -->
+        <h3>Ratings</h3>
+        <ul>
+          <li><input type="checkbox"> ⭐⭐⭐⭐⭐</li>
+          <li><input type="checkbox"> ⭐⭐⭐⭐</li>
+          <li><input type="checkbox"> ⭐⭐⭐</li>
+          <li><input type="checkbox"> ⭐⭐</li>
+          <li><input type="checkbox"> ⭐</li>
+        </ul>
+      </aside>
+
+      <!-- Product Display -->
+      <div class="products-grid">
+        <div class="section-title">Mobile Accessories</div>
+
+        <div class="product-row">
+          <img src="assets/images/Iphone.png" alt="Product 1" class="product-image">
+          <div class="product-info">
+            <h4>APPLE IPHONE 11</h4>
+            <p class="price">$ 1,200</p>
+            <p class="rating">★★★★☆</p>
+          </div>
+        </div>
+
+        <div class="product-row">
+          <img src="assets/images/Laptop&PC.png" alt="Product 2" class="product-image">
+          <div class="product-info">
+            <h4>LENOVO LAPTOP</h4>
+            <p class="price">$ 2,000</p>
+            <p class="rating">★★★★★</p>
+          </div>
+        </div>
+
+        <div class="product-row">
+          <img src="assets/images/Tablet.png" alt="Product 3" class="product-image">
+          <div class="product-info">
+            <h4>HUAWEI TAB 4</h4>
+            <p class="price">$ 500</p>
+            <p class="rating">★★★☆☆</p>
+          </div>
+        </div>
+
+        <div class="product-row">
+          <img src="assets/images/Watch.png" alt="Product 4" class="product-image">
+          <div class="product-info">
+            <h4>APPLE WATCH PRO</h4>
+            <p class="price">$ 2,299</p>
+            <p class="rating">★★★★☆</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER GOES HERE -->
+  <!-- Example: <footer>...your existing footer code...</footer> -->
+<!-- Footer Section -->
+<footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <img src="assets/images/logo.svg.png" alt="Logo" class="footer-logo" />
+      <p class="footer-description">
+        Best Information about the Company goes here.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><img src="assets/images/facebook3.png" alt="Facebook" /></a>
+        <a href="#"><img src="assets/images/twitter3.png" alt="Twitter" /></a>
+        <a href="#"><img src="assets/images/instagram3.png" alt="Instagram" /></a>
+        <a href="#"><img src="assets/images/linkedin3.png" alt="linkedin" /></a>
+        <a href="#"><img src="assets/images/youtube3.png" alt="Youtube" /></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Find Store</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Patnership</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Find Store</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Money Refund</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+        <div class="footer-column">
+      <h4>For Users</h4>
+      <ul>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">My Orders</a></li>
+      </ul>
+    </div>
+
+      <div class="footer-column">
+      <h4>Get App</h4>
+      <ul>
+        <a href="#"><img src="assets/images/PlayStore.png" alt="Google PlayStore" /></a>
+        <a href="#"><img src="assets/images/AppStore.png" alt="AppStore" /></a>  
+      </ul>
+    </div>
+
+    </div>
+  </div>
+  <div class="footer-bottom-bar">
+  <div class="footer-left">
+    ©2025 Ecommerce
+  </div>
+  <div class="footer-right">
+    <select class="language-select">
+      <option value="en">English</option>
+      <option value="ur">Urdu</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+    </select>
+  </div>
+</div>
+
+</footer> 
+
+</body>
+</html>
