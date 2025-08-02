@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Automobiles - Product Listing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Inline quick styling for demo; move to style.css */
+    body {
+      background: #f5f6f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container { max-width: 1200px; margin: auto; padding: 20px; display: flex; gap: 20px; }
+    .sidebar { width: 250px; background: white; padding: 20px; border-radius: 8px; }
+    .main-content { flex: 1; }
+    .filters h4 { margin: 20px 0 10px; font-size: 16px; }
+    .filters label { display: block; margin: 4px 0; }
+    .breadcrumb { font-size: 14px; color: #888; margin-bottom: 10px; }
+    .product-card { background: white; padding: 16px; border-radius: 8px; display: flex; gap: 16px; margin-bottom: 20px; }
+    .product-card img { width: 150px; height: 150px; object-fit: cover; }
+    .product-info h3 { margin: 0; font-size: 18px; }
+    .product-info .price { color: red; font-weight: bold; }
+    .product-info .old-price { text-decoration: line-through; margin-left: 10px; color: #999; }
+    .product-info .desc { font-size: 14px; color: #555; margin: 6px 0; }
+    .product-info .meta { font-size: 13px; color: #666; margin: 4px 0; }
+    .pagination { display: flex; gap: 6px; justify-content: center; margin-top: 20px; }
+    .pagination button { background: white; border: 1px solid #ccc; padding: 6px 12px; cursor: pointer; }
+    .newsletter, .footer { background: white; padding: 20px; margin-top: 40px; border-radius: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <div class="breadcrumb">Home > Category > Automobiles</div>
+  </div>
+
+  <!-- Main Section -->
+  <div class="container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar filters">
+      <h4>Category</h4>
+      <label><input type="checkbox" /> Car Accessories</label>
+      <label><input type="checkbox" /> Electric Vehicles</label>
+      <label><input type="checkbox" /> Engine Parts</label>
+
+      <h4>Brands</h4>
+      <label><input type="checkbox" /> Toyota</label>
+      <label><input type="checkbox" /> Honda</label>
+      <label><input type="checkbox" /> Tesla</label>
+
+      <h4>Features</h4>
+      <label><input type="checkbox" /> Bluetooth</label>
+      <label><input type="checkbox" /> Navigation</label>
+
+      <h4>Price Range</h4>
+      <input type="number" placeholder="Min" style="width: 45%"/> - 
+      <input type="number" placeholder="Max" style="width: 45%"/>
+      <br><button style="margin-top: 6px;">Apply</button>
+
+      <h4>Condition</h4>
+      <label><input type="radio" name="condition" checked /> Any</label>
+      <label><input type="radio" name="condition" /> Brand new</label>
+
+      <h4>Ratings</h4>
+      <label><input type="checkbox" /> ⭐⭐⭐⭐⭐</label>
+      <label><input type="checkbox" /> ⭐⭐⭐⭐</label>
+    </aside>
+
+    <!-- Product List -->
+    <main class="main-content">
+      <!-- Filters -->
+      <div style="margin-bottom: 16px;">
+        <strong>12,000+ results in Automobiles</strong> 
+        <label><input type="checkbox"/> Verified only</label>
+        <label><input type="checkbox"/> Featured</label>
+      </div>
+
+      <!-- Product Cards -->
+      <div class="product-card">
+        <img src="assets/images/car1.jpg" alt="Product Image" />
+        <div class="product-info">
+          <h3>Toyota Corolla 2020</h3>
+          <div><span class="price">$9,800.00</span> <span class="old-price">$12,000.00</span></div>
+          <div class="desc">Excellent condition, automatic, fuel-efficient.</div>
+          <div class="meta">⭐ 4.7 • 215 orders • Free Shipping</div>
+          <a href="#">View details</a>
+        </div>
+      </div>
+
+      <!-- Add more product-card blocks similarly -->
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button>«</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>»</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="container">
+    <div class="newsletter">
+      <h3>Subscribe to our newsletter</h3>
+      <p>Get updates and special offers from automobile suppliers</p>
+      <input type="email" placeholder="Enter your email" />
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container">
+    <div class="footer">
+      <p>© 2025 Ecommerce. All rights reserved.</p>
+    </div>
+  </div>
+
+</body>
+</html>
